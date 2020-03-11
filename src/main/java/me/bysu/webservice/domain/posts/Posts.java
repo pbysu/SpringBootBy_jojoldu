@@ -12,11 +12,8 @@ import javax.persistence.Id;
 
 @NoArgsConstructor(access= AccessLevel.PROTECTED) // default Construct, access :  restrict protected
 @Getter
-@Entity
-// Entity : It will link Table
+@Entity // Entity : It will link Table
 public class Posts {
-
-
 
     @Id // PK field (Primary Key,
     @GeneratedValue
@@ -36,6 +33,4 @@ public class Posts {
         this.content= content;
         this.author = author;
     }
-
-
 }
