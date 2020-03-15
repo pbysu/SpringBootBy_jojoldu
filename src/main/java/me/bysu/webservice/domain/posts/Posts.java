@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import me.bysu.webservice.domain.BaseTimeEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +15,8 @@ import javax.persistence.Id;
 @Getter
 @Entity
 // Entity : It will link Table
-public class Posts {
+// Here is Entity Class!!!!!!!!!!!!!!!
+public class Posts extends BaseTimeEntity {
 
 
 

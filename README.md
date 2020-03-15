@@ -1,4 +1,4 @@
-# 아래 사이트 따라하
+# 아래 사이트 따라하기
 
 
 > * Blog : http://jojoldu.tistory.com
