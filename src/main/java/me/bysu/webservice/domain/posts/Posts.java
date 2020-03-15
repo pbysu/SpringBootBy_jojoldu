@@ -11,12 +11,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@NoArgsConstructor(access= AccessLevel.PROTECTED) // default Construct, access :  restrict protected
-@Getter
 
-@Entity
 // Entity : It will link Table
 // Here is Entity Class!!!!!!!!!!!!!!!
+@NoArgsConstructor(access= AccessLevel.PROTECTED) // default Construct, access :  restrict protected
+@Getter
+@Entity
 public class Posts extends BaseTimeEntity {
 
 

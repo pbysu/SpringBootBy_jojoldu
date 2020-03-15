@@ -1,8 +1,8 @@
 package me.bysu.webservice.web;
 
 import lombok.AllArgsConstructor;
-import me.bysu.webservice.domain.posts.PostsRepository;
 import me.bysu.webservice.dto.posts.PostsSaveRequestDto;
+import me.bysu.webservice.service.PostsService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class WebRestController {
 
-    private PostsRepository postsRepository;
 
+    private PostsService postsService;
     // just pring hello~
     @GetMapping("/hello")
     public String hello() {
@@ -24,8 +24,8 @@ public class WebRestController {
     //we do not use Autowired
     // we still DI, using @AllArgsConstructor
     @PostMapping("/posts")
-    public void savePosts(@RequestBody PostsSaveRequestDto dto){
-        postsRepository.save(dto.toEntity());
+    public Long savePosts(@RequestBody PostsSaveRequestDto dto){
+        return postsService.save(dto);
     }
 
 }
