@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import me.bysu.webservice.domain.BaseTimeEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,8 +13,12 @@ import javax.persistence.Id;
 
 @NoArgsConstructor(access= AccessLevel.PROTECTED) // default Construct, access :  restrict protected
 @Getter
-@Entity // Entity : It will link Table
-public class Posts {
+
+@Entity
+// Entity : It will link Table
+// Here is Entity Class!!!!!!!!!!!!!!!
+public class Posts extends BaseTimeEntity {
+
 
     @Id // PK field (Primary Key,
     @GeneratedValue
